@@ -1,0 +1,25 @@
+
+
+
+
+
+  <html>
+  <body>
+    <div class="container">
+      <div id='notepad'>
+<app-toolbar [notes2]="notes"></app-toolbar>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+<app-notes [notes1]="notes"></app-notes>
+</mat-drawer>
+  <mat-drawer-content>
+    <app-create-note (addNewEvent)="addNote($event)"></app-create-note>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<router-outlet></router-outlet>
+      </div>
+      </div>
+  </body>
+</html>

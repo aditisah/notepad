@@ -1,0 +1,20 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { RouterLinkActive } from '@angular/router';
+//import { create } from 'domain';
+
+@Component({
+  selector: 'app-toolbar',
+  templateUrl: './toolbar.component.html',
+  styleUrls: ['./toolbar.component.css']
+})
+export class ToolbarComponent implements OnInit {
+@Input() notes2: string[] = [];
+  constructor() { }
+reset(){
+this.notes2 = [];
+}
+  ngOnInit(): void {
+
+  }
+
+}

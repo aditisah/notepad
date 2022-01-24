@@ -1,0 +1,16 @@
+
+
+#notepad{
+  position: absolute;
+  top: 20px;
+  margin: auto;
+  margin-left: 10px;
+  height: 675px;
+  width: 480px;
+  background-color: cornsilk;
+}
+app-notes{
+  position: absolute;
+  top: 55px;
+}
+

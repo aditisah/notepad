@@ -1,0 +1,18 @@
+.container{
+  top: 0;
+  margin: auto;
+  height: 700px;
+  width: 500px;
+  background-color: brown;
+}
+.example-container {
+  width: 480px;
+  height: 620px;
+  border: 1px solid #555;
+
+}
+
+mat-drawer{
+  width: 180px;
+  background-color: lavenderblush;
+}

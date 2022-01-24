@@ -1,0 +1,13 @@
+ .container{
+  position: absolute;
+  top: 55px;
+
+  margin-left: 1px;
+  height: 615px;
+  width: 475px;
+  background-color:floralwhite;
+}
+mat-list{
+  width: 50%;
+  height: 80%;
+}
