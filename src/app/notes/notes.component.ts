@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-notes',
@@ -7,6 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NotesComponent implements OnInit {
   @Input() notes1: string[]=[];
+  @Output() addTextEvent = new EventEmitter<string>();
+  date = new Date();
+  selectedNote: string= '';
+  //IsNoteSelected = false;
   constructor() {
     //console.log(this.notes1);
    }
@@ -15,7 +20,15 @@ export class NotesComponent implements OnInit {
   //   this.notes.push(newNote);
   //   console.log(this.notes);
   //   }
+  //document.get ('mat-list-item').onclick = changeColor;
 
+  onSelectNote(selectedNote: string){
+    //let index = this.notes1.findIndex(x=> x.text===text);
+    //this.IsNoteSelected = true;
+    this.addTextEvent.emit(selectedNote);
+    // let col: any = document.getElementById('list');
+    // col.style.backgroundColor = 'yellow';
+  }
   ngOnInit(): void {
    //console.log(this.notes1);
   }

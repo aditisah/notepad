@@ -15,6 +15,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 const appRoutes: Routes = [
+  {path: 'notepad' , component: NotepadComponent},
   // {path: 'notes', component: NotesComponent},
   {path: 'create' , component: CreateNoteComponent}
 ]

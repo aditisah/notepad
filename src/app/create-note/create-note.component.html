@@ -2,10 +2,18 @@
 
 
 
-  <textarea name= 'text' id="t" [(ngModel)]="newNote"></textarea>
-  <button (click)="addNewNote(newNote)">submit</button>
-
-
+  <!-- <textarea name= 'text' id="t" [(ngModel)]="newNote"
+  (ngModelChange)="addNewNote(newNote)"
+  *ngIf="!IsNoteSelected"></textarea> -->
+   <!-- <button (click)="showSelectedNote()">submit</button> -->
+  <!-- <textarea name= 'text' id="t1" *ngIf="IsNoteSelected">{{selectedNotes}}</textarea> -->
+<!-- <p>{{selectedNotes}}</p> -->
       <!-- <app-notes ></app-notes> -->
 
+      <input name= 'text' id="t" [(ngModel)]="newNote"
+      (ngModelChange)="addNewNote(newNote)"
+      *ngIf="!IsNoteSelected" value="{{newNote}}">
+        <button (click)="showSelectedNote()">submit</button>
 
+    <!-- <p>{{selectedNotes}}</p> -->
+          <!-- <app-notes ></app-notes> -->

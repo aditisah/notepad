@@ -7,12 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotepadComponent implements OnInit {
   notes: string[] = [];
-  addNote(newNote: string){
+  selectedNoteData: string = '';
+    addNote(newNote: string){
     this.notes.push(newNote);
     console.log(this.notes);
+
+    //this.notes = [];
     //this.notes = [];
 //newNote.slice(0,newNote.length);
     }
+    showSelectedNote(selectedNote: string){
+      this.selectedNoteData = selectedNote;
+      console.log(this.selectedNoteData);
+      }
   constructor() { }
 
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter, Input } from '@angular/core';
 //import { format } from 'path';
 
 
@@ -9,12 +9,27 @@ import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 })
 export class CreateNoteComponent implements OnInit {
 @Output() addNewEvent =new EventEmitter<string>();
-
+@Input() selectedNotes = '';
  newNote: string = '';
+ IsNoteSelected = false;
+
 addNewNote(newNote: string){
+//this.IsNoteSelected = false;
 this.addNewEvent.emit(newNote);
-//newNote = '';
-//console.log(newNote);
+//this.IsNoteSelected = !this.IsNoteSelected;
+this.IsNoteSelected = false;
+//console.log(this.IsNoteSelected);
+
+// newNote = '';
+// console.log(`new data is:${newNote}`);
+}
+showSelectedNote(){
+ //this.IsNoteSelected = true;
+  console.log(this.selectedNotes);
+
+this.newNote= this.selectedNotes;  //console.log(this.IsNoteSelected);
+  //this.IsNoteSelected = false;
+  console.log(`new note value:${this.newNote}`);
 }
   constructor() { }
 
