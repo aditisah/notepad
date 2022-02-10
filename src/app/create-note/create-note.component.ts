@@ -11,13 +11,14 @@ export class CreateNoteComponent implements OnInit {
 @Output() addNewEvent =new EventEmitter<string>();
 @Input() selectedNotes = '';
  newNote: string = '';
- IsNoteSelected = false;
+ IsNoteNotSelected = true;
 
 addNewNote(newNote: string){
 //this.IsNoteSelected = false;
 this.addNewEvent.emit(newNote);
+//this.selectedNotes = newNote;
 //this.IsNoteSelected = !this.IsNoteSelected;
-this.IsNoteSelected = false;
+//this.IsNoteNotSelected = false;
 //console.log(this.IsNoteSelected);
 
 // newNote = '';
@@ -25,11 +26,11 @@ this.IsNoteSelected = false;
 }
 showSelectedNote(){
  //this.IsNoteSelected = true;
-  console.log(this.selectedNotes);
+  console.log("hi");
 
-this.newNote= this.selectedNotes;  //console.log(this.IsNoteSelected);
-  //this.IsNoteSelected = false;
-  console.log(`new note value:${this.newNote}`);
+ this.newNote= this.selectedNotes;  //console.log(this.IsNoteSelected);
+  this.IsNoteNotSelected = false;
+   console.log(`new note value:${this.newNote}`);
 }
   constructor() { }
 

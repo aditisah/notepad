@@ -9,14 +9,14 @@ import { Router, RouterLinkActive } from '@angular/router';
 })
 export class ToolbarComponent implements OnInit {
 //@Input() notes2: string[] = [];
-  constructor(private router: Router) { }
+  constructor() { }
 // reset(){
 // this.notes2 = [];
 // }
   ngOnInit(): void {
 
   }
-  onCreateNote(){
-this.router.navigate(['/create']);
-  }
+//   onCreateNote(){
+// this.router.navigate(['/create']);
+//   }
 }
